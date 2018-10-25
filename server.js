@@ -2,6 +2,8 @@ const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
 
+const port = process.env.port || 3000;
+
 const app = express();
 
 //=============== Handlebars ===============
@@ -63,4 +65,6 @@ app.get("/bad", (req, res) => {
 
 // ============ End of Routes ===============
 
-app.listen(3000);
+app.listen(port, () => {
+  console.log(`Server is listening on PORT: ${port}`);
+});
