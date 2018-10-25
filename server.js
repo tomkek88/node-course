@@ -65,4 +65,6 @@ app.get("/bad", (req, res) => {
 
 // ============ End of Routes ===============
 
-app.listen(port);
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
